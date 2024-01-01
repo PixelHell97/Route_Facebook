@@ -7,18 +7,14 @@
     <string name="help_center">Help Center</string>
     <string name="sing_up_for_facebook">Sing Up for Facebook</string>
     <string name="appLogo">appLogo</string>
-    <string name="post_caption">POV: your group</string>
     <string name="profile_pic">profile_pic</string>
-    <string name="group_name">ExamsMeMEs</string>
-    <string name="time_counter">5 hr .</string>
     <string name="more_tools">more_tools</string>
     <string name="post_pic">post_pic</string>
-    <string name="likes_counter">15</string>
     <string name="comments_counter">Comments</string>
     <string name="share_counter">Share</string>
     <string name="break_line">break</string>
     <string name="like_button">LikeButton</string>
     <string name="comment_button">CommentButton</string>
     <string name="share_button">ShareButton</string>
-    <string name="like_logo">like_logo</string>
+    <string name="like">Like</string>
 </resources>

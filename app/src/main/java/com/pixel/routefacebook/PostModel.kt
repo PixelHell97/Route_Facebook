@@ -9,4 +9,23 @@ data class PostModel(
     val likes: Int,
     val comments: Int,
     val share: Int
-)
+) {
+    constructor(
+        userProfilePic: Int,
+        name: String,
+        time: String,
+        postCaption: String,
+        likes: Int,
+        comments: Int,
+        share: Int
+    ) : this(
+        userProfilePic = userProfilePic,
+        name = name,
+        time = time,
+        postCaption = postCaption,
+        postPic = 0,
+        likes = likes,
+        comments = comments,
+        share = share
+    )
+}

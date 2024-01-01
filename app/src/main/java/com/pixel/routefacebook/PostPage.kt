@@ -35,12 +35,12 @@ class PostPage : AppCompatActivity() {
             PostModel(
                 R.drawable.avatar4, "Abas El Aaad", "5d .",
                 "Today i learned RecyclerView\n" +
-                        "what is your opinion about that?", 0, 120, 15, 90
+                        "what is your opinion about that?", 120, 15, 90
             )
         )
         postsList.add(
             PostModel(
-                R.drawable.avatar2, "Route", "5 min.",
+                R.drawable.avatar2, "Route", "5m.",
                 "Now available,\n" +
                         "Route now open the gate to sign with us in FullStack diploma\n" +
                         "Join us now, link in the comments\n" +

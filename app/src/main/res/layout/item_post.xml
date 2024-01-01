@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:padding="8dp"
+    android:layout_marginVertical="5dp"
     tools:context=".PostPage">
 
 
@@ -39,17 +39,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/abeezee"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                tools:text="@string/group_name" />
+                tools:text="ExamMeMes" />
 
             <TextView
                 android:id="@+id/last_post_modified"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/facebook_font"
                 android:textColor="#4D000000"
-                tools:text="@string/time_counter" />
+                tools:text="5 hr." />
         </LinearLayout>
 
         <ImageButton
@@ -61,7 +63,7 @@
             android:background="#0000"
             android:contentDescription="@string/more_tools"
             android:foregroundGravity="center"
-            android:src="@drawable/more_tools" />
+            android:src="@drawable/menu" />
 
     </RelativeLayout>
 
@@ -71,11 +73,12 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/abeezee"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/post_info"
-        tools:text="@string/post_caption" />
+        tools:text="POV: your group" />
 
     <ImageView
         android:id="@+id/post_pic"
@@ -97,70 +100,62 @@
         android:padding="10dp"
         app:layout_constraintTop_toBottomOf="@id/post_pic">
 
-        <LinearLayout
-            android:id="@+id/reacts_cec"
+        <TextView
+            android:id="@+id/like_counter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/like_logo"
-                android:src="@drawable/ic_like" />
-
-            <TextView
-                android:id="@+id/like_counter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/grey"
-                android:textSize="13sp"
-                tools:text="@string/likes_counter" />
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/facebook_font"
+            android:textColor="@color/grey"
+            android:textSize="13sp"
+            app:drawableLeftCompat="@drawable/facebook_like_icon"
+            tools:text="15" />
 
         <LinearLayout
-            android:id="@+id/commet"
+            android:id="@+id/comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_toStartOf="@id/share">
+
             <TextView
                 android:id="@+id/comment_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/facebook_font"
                 android:textColor="@color/grey"
                 tools:text="5" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/facebook_font"
                 android:text="@string/comments_counter"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/grey"/>
+                android:textColor="@color/grey" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true">
+
             <TextView
                 android:id="@+id/share_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/facebook_font"
                 android:textColor="@color/grey"
                 tools:text="2" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/facebook_font"
                 android:text="@string/share_counter"
-                android:fontFamily="sans-serif-black"
-                android:textColor="@color/grey"/>
+                android:textColor="@color/grey" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -177,34 +172,73 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:baselineAligned="false"
+        android:weightSum="3"
         app:layout_constraintTop_toBottomOf="@id/break1">
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
 
-        <ImageButton
-            android:id="@+id/like_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0000"
-            android:contentDescription="@string/like_button"
-            android:src="@drawable/like_button" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:src="@drawable/like" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/facebook_font"
+                android:text="@string/like"
+                android:textColor="#454545" />
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/comment_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0000"
-            android:contentDescription="@string/comment_button"
-            android:src="@drawable/comment_button" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/comment" />
 
-        <ImageButton
-            android:id="@+id/share_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#0000"
-            android:contentDescription="@string/share_button"
-            android:src="@drawable/share_button" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/facebook_font"
+                android:text="@string/comments_counter"
+                android:textColor="#454545" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/facebook_font"
+                android:text="@string/share_counter"
+                android:textColor="#454545" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
